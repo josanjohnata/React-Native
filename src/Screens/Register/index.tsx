@@ -5,11 +5,11 @@ import { registerStyle } from "./register.style";
 import { useNavigation } from '@react-navigation/native'
 import { HeaderComponent } from "../../Components/Header";
 
-const RegisterScreen = () => {
-  const navigation = useNavigation;
+export default function RegisterScreen() {
+  const navigation = useNavigation();
 
   function handleScreen() {
-    navigation.navigate()
+    navigation.navigate("Login")
   }
 
   return (
@@ -28,5 +28,3 @@ const RegisterScreen = () => {
     </SafeAreaView>
   );
 }
-
-export default RegisterScreen;

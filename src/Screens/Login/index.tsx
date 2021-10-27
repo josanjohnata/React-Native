@@ -5,7 +5,7 @@ import { loginStyle } from './login.style';
 import { useNavigation } from '@react-navigation/native'
 
 export default function LoginScreen() {
-  const navigation = useNavigation;
+  const navigation = useNavigation();
 
   function handleScreen() {
     navigation.navigate("Register")

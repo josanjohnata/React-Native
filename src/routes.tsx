@@ -28,7 +28,7 @@ export default function Routes() {
           component={Home}
         />
         <Screen
-          name="Cursos"
+          name="Courses"
           component={Courses}
         />
       </Navigator>
