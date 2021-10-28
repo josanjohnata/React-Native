@@ -1,12 +1,14 @@
+import 'react-native-gesture-handler';
+
 import React from 'react';
-import Routes from './src/routes';
-import { Provider as PaperProvider, TextInput } from 'react-native-paper';
-import { theme } from './App.style';
+import Routes from './src/Routes';
+// import { theme } from './App.style';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
-    <PaperProvider theme={theme}>
+    <NavigationContainer>
       <Routes />
-    </PaperProvider>
+    </NavigationContainer>
   );
 }
