@@ -19,5 +19,8 @@ export const loginStyle = StyleSheet.create({
     margin: 2,
     marginLeft: 0,
     marginRight: 0
+  },
+  checkbox: {
+
   }
-})
+});
