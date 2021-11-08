@@ -2,17 +2,22 @@ import React, { useState } from 'react';
 import { SafeAreaView, View, Text } from 'react-native';
 import { Button, Card, Checkbox, TextInput } from 'react-native-paper';
 import { loginStyle } from './login.style';
-// import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
 // import { Formik } from 'formik';
 // import Login from '../../Services/auth';
 
+
 export default function LoginScreen() {
   const [isSelected, setSelection] = useState(false);
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
 
   // function handleScreen() {
   //   navigation.navigate("Register")
   // }
+
+  function handleScreenHome() {
+    navigation.navigate('Home');
+  }
 
   return (
     <SafeAreaView style={loginStyle.content}>
@@ -34,7 +39,7 @@ export default function LoginScreen() {
               Forgot email/password
             </Button>
             <Button
-              onPress={() => (alert('Deu Xablau'))}
+              onPress={ handleScreenHome }
               mode="contained"
               style={loginStyle.cardButton}>
               Login
