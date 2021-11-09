@@ -1,21 +1,23 @@
-// import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Appbar } from "react-native-paper";
 
-export const HeaderComponent = ( props: HeaderComponentParams) => {
-  // const navigation = useNavigation();
+const HeaderComponent = ( props: HeaderComponentParams) => {
+  const navigation = useNavigation();
 
-  // function handleScreen() {
-  //   navigation.navigate("Tela de Login")
-  // }
+  function handleScreen() {
+    navigation.navigate("Login")
+  }
 
   return (
     <Appbar>
-      {/* <Appbar.BackAction onPress={ handleScreen } /> */}
+      <Appbar.BackAction onPress={ handleScreen } />
       <Appbar.Content title={props.title} />
     </Appbar>
   );
 };
+
+export default HeaderComponent;
 
 interface HeaderComponentParams {
   title: string;

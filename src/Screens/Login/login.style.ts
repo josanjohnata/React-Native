@@ -7,20 +7,23 @@ export const loginStyle = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: "rgb(101, 37, 131)"
+    backgroundColor: "#68de5a"
   },
   view: {
     width: "80%"
   },
   cardTitle: {
-    color: "rgb(101, 37, 131)"
+    color: '#8c52e5',
+    fontSize: 25,
+    fontWeight: "bold",
+    fontFamily: 'Roboto',
+    textAlign: 'center',
+    marginTop: 15,
   },
   cardButton: {
     margin: 2,
     marginLeft: 0,
-    marginRight: 0
+    marginRight: 0,
   },
-  checkbox: {
-
-  }
+  
 });

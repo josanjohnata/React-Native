@@ -8,22 +8,21 @@ import { useNavigation } from '@react-navigation/native';
 
 
 export default function LoginScreen() {
-  const [isSelected, setSelection] = useState(false);
   const navigation = useNavigation();
 
-  // function handleScreen() {
-  //   navigation.navigate("Register")
-  // }
+  function handleScreenRegister() {
+    navigation.navigate("Register")
+  }
 
   function handleScreenHome() {
-    navigation.navigate('Home');
+    navigation.navigate( 'Home');
   }
 
   return (
     <SafeAreaView style={loginStyle.content}>
       <View style={loginStyle.view}>
         <Card>
-          <Card.Title title="Delivery App" titleStyle={loginStyle.cardTitle}></Card.Title>
+          <Text style={loginStyle.cardTitle}>Josan App</Text>
           <Card.Content>
             <TextInput
               label="Email"
@@ -35,18 +34,23 @@ export default function LoginScreen() {
             />
             <Button
               uppercase={false}
-              style={loginStyle.cardButton}>
+              style={loginStyle.cardButton}
+              color='#8c52e5'
+            >
               Forgot email/password
             </Button>
             <Button
               onPress={ handleScreenHome }
               mode="contained"
-              style={loginStyle.cardButton}>
+              color='#8c52e5'
+              style={loginStyle.cardButton}
+            >
               Login
             </Button>
             <Button
               style={loginStyle.cardButton}
-            // onPress={ handleScreen }
+              onPress={ handleScreenRegister }
+              color='#8c52e5'
             >
               Register
             </Button>

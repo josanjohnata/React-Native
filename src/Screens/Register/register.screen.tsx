@@ -2,20 +2,20 @@ import React from "react";
 import { SafeAreaView, ScrollView, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 import { registerStyle } from "./register.style";
-// import { useNavigation } from '@react-navigation/native'
-import { HeaderComponent } from "../../Components/Header";
+import { useNavigation } from '@react-navigation/native'
+import Header from "../../Components/Header/index";
 
-export const RegisterScreen = () => {
-  // const navigation = useNavigation();
+const RegisterScreen = () => {
+  const navigation = useNavigation();
 
-  // function handleScreen() {
-  //   navigation.navigate("Login")
-  // }
+  function handleScreen() {
+    navigation.navigate("Login")
+  }
 
   return (
     <SafeAreaView>
       <ScrollView>
-        <HeaderComponent title="Register" />
+        <Header title="Register" />
         <View style={registerStyle.content}>
           <TextInput label="Name" />
           <TextInput label="Email" keyboardType="email-address" />
@@ -28,3 +28,5 @@ export const RegisterScreen = () => {
     </SafeAreaView>
   );
 }
+
+export default RegisterScreen;
