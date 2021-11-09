@@ -15,7 +15,10 @@ export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.text}>Olá, seja bem vindo</Text>
-      <Image style={styles.image} source={require('../../images/download.png')} />
+      <View style={styles.card}>
+        <Image style={styles.image} source={require('../../images/gamanewlogo.png')} />
+        <Text style={styles.cardText}> Josan App </Text>
+      </View>
       <Button color='#8c52e5' title={"Ver Cursos"} onPress={handleScreenCourse} />
     </SafeAreaView>
   );

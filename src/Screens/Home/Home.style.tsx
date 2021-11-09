@@ -16,7 +16,20 @@ const styles = StyleSheet.create({
     fontSize: 22,
     color: '#8c52e5',
     fontWeight: 'bold',
-  },  
+  },
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 22,
+    justifyContent: 'center',
+    padding: 15,
+    margin: 22,
+  },
+  cardText: {
+    fontSize: 24,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    color: '#8c52e5',
+  },
 });
 
 export default styles;

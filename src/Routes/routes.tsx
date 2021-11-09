@@ -7,6 +7,10 @@ import Courses from '../Screens/Courses/index';
 import Home from "../Screens/Home/index";
 import Register from "../Screens/Register/register.screen";
 
+interface screens {
+  name: string;
+}
+
 const { Navigator, Screen } = createStackNavigator();
 
 export default function Routes() {
@@ -20,18 +24,18 @@ export default function Routes() {
           }
         }}
       >
-        <Screen
+        {/* <Screen
           name="Login"
           component={Login}
         />
           <Screen
             name="Register"
             component={Register}
-          />
-        <Screen
+          /> */}
+        {/* <Screen
           name="Home"
           component={Home}
-        />
+        /> */}
         <Screen
           name="Ver Cursos"
           component={Courses}
