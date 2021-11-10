@@ -30,6 +30,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#8c52e5',
   },
+  buttons: {
+    margin: 10,
+  },
 });
 
 export default styles;

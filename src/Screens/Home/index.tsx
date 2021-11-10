@@ -4,6 +4,7 @@ import { View, SafeAreaView, Button, Image, Text } from 'react-native';
 import styles from './Home.style';
 import { useNavigation } from '@react-navigation/native';
 import HeaderComponent from '../../Components/Header/index';
+import Maps from '../Maps/index';
 
 export default function Home() {
   const navigation = useNavigation();
@@ -19,8 +20,11 @@ export default function Home() {
         <Image style={styles.image} source={require('../../images/gamanewlogo.png')} />
         <Text style={styles.cardText}> Josan App </Text>
       </View>
-      <Button color='#8c52e5' title={"Ver Cursos"} onPress={ () => handleScreenCourse('Ver Cursos') } />
-      <Button color='#8c52e5' title={"Acessar camera"} onPress={ () => handleScreenCourse('Camera') } />
+      <View style={styles.buttons} >
+        <Button color='#8c52e5' title={"Ver Cursos"} onPress={ () => handleScreenCourse('Ver Cursos') } />
+        <Button color='#8c52e5' title={"Acessar camera"} onPress={ () => handleScreenCourse('Camera') } />
+        <Button color='#8c52e5' title={"Estamos pelo mundo"} onPress={ () => handleScreenCourse('Maps') } />
+      </View>
     </SafeAreaView>
   );
 }

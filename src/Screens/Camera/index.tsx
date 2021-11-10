@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Button } from 'react-native';
 import styles from './Camera.style';
-import { Camera } from 'expo-camera'
+import { Camera } from 'expo-camera';
+import { useNavigation } from '@react-navigation/native';
 
 export default function CameraDevice() {
   const [hasPermission, setHasPermission] = useState<any>(null);
   const [type, setType] = useState(Camera.Constants.Type.back);
+  const navigation = useNavigation();
 
   useEffect(() => {
     (async () => {
@@ -14,7 +16,12 @@ export default function CameraDevice() {
     })();
   }, []);
 
+  function handleScreen() {
+    navigation.navigate('Home')
+  }
+
   if (hasPermission === null) {
+    
     return (
       <View style={styles.container}>
         <Text style={styles.containerError}>
@@ -41,11 +48,17 @@ export default function CameraDevice() {
           <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              setType(type === 2 ? 1 : 2
+              setType(
+                type === 2 ? 1 : 2
               );
             }}
           >
             <Text style={styles.text}>Mudar camera</Text>
+            <Button
+              color='#68de5a'
+              title={'Voltar para home'}
+              onPress={handleScreen}
+            />
           </TouchableOpacity>
         </View>
       </Camera>

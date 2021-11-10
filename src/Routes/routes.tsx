@@ -7,6 +7,7 @@ import Courses from '../Screens/Courses/index';
 import Home from "../Screens/Home/index";
 import Register from "../Screens/Register/register.screen";
 import Camera from "../Screens/Camera/index";
+import Maps from "../Screens/Maps/index";
 
 interface screens {
   name: string;
@@ -25,25 +26,29 @@ export default function Routes() {
           }
         }}
       >
-        {/* <Screen
+        <Screen
           name="Login"
           component={Login}
         />
           <Screen
             name="Register"
             component={Register}
-          /> */}
-        {/* <Screen
+          />
+        <Screen
           name="Home"
           component={Home}
-        /> */}
-        {/* <Screen
+        />
+        <Screen
           name="Ver Cursos"
           component={Courses}
-        /> */}
+        />
         <Screen
           name="Camera"
           component={Camera}
+        />
+        <Screen
+          name="Maps"
+          component={Maps}
         />
       </Navigator>
     </NavigationContainer>
