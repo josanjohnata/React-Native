@@ -8,8 +8,8 @@ import HeaderComponent from '../../Components/Header/index';
 export default function Home() {
   const navigation = useNavigation();
 
-  function handleScreenCourse() {
-    navigation.navigate('Ver Cursos')
+  function handleScreenCourse(route: string) {
+    navigation.navigate(route)
   }
 
   return (
@@ -19,7 +19,8 @@ export default function Home() {
         <Image style={styles.image} source={require('../../images/gamanewlogo.png')} />
         <Text style={styles.cardText}> Josan App </Text>
       </View>
-      <Button color='#8c52e5' title={"Ver Cursos"} onPress={handleScreenCourse} />
+      <Button color='#8c52e5' title={"Ver Cursos"} onPress={ () => handleScreenCourse('Ver Cursos') } />
+      <Button color='#8c52e5' title={"Acessar camera"} onPress={ () => handleScreenCourse('Camera') } />
     </SafeAreaView>
   );
 }

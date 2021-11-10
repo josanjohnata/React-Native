@@ -6,6 +6,7 @@ import Login from "../Screens/Login/index";
 import Courses from '../Screens/Courses/index';
 import Home from "../Screens/Home/index";
 import Register from "../Screens/Register/register.screen";
+import Camera from "../Screens/Camera/index";
 
 interface screens {
   name: string;
@@ -36,9 +37,13 @@ export default function Routes() {
           name="Home"
           component={Home}
         /> */}
-        <Screen
+        {/* <Screen
           name="Ver Cursos"
           component={Courses}
+        /> */}
+        <Screen
+          name="Camera"
+          component={Camera}
         />
       </Navigator>
     </NavigationContainer>
