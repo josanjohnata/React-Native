@@ -26,7 +26,7 @@ export default function MapsComponent() {
 
   return (
     <View style={styles.container}>
-      xablau
+      <Text>Maps</Text>
       <MapView
         style={styles.map}
         provider={PROVIDER_GOOGLE}
